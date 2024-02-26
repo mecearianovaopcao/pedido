@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu Pedido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="orderForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address" required>
+        <label for="phoneNumber">Número:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+        <label for="waterBrand">Marca de Água:</label>
+        <select id="waterBrand" name="waterBrand">
+            <option value="ilha_bela">Ilha Bela</option>
+            <option value="mar_doce">Mar Doce</option>
+            <option value="floratta">Floratta</option>
+        </select>
+        <label for="waterQuantity">Quantidade de Água:</label>
+        <input type="number" id="waterQuantity" name="waterQuantity" min="0" value="0" step="1">
+        <label for="gasQuantity">Quantidade de Gás:</label>
+        <input type="number" id="gasQuantity" name="gasQuantity" min="0" value="0" step="1">
+        <button id="gerarReciboButton" type="button">1 - Gerar Recibo</button></br>
+        <button id="enviarPedidoButton" type="button">2 - Enviar Pedido</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define a altura da página como 100% da altura da viewport */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilos para o formulário */
+form {
+    max-width: 300px;
+    width: 100%; /* Garante que o formulário não ultrapasse a largura da página */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
