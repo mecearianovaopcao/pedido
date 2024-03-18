@@ -63,7 +63,7 @@ function gerarRecibo() {
 
     // Gera o conteúdo do recibo
     const receiptContent = `
-        Planeta Água
+        Planeta Água - Nota Digital
         Rua do Ribeiro, 287 centro
         CNPJ: 20.070.673/0001-25
 
