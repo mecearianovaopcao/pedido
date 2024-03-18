@@ -76,6 +76,9 @@ function gerarRecibo() {
         ${gasQuantity} botijões de gás - Total: R$ ${(gasTotal).toFixed(2)}
 
         Total do Pedido: R$ ${totalPrice.toFixed(2)}
+        
+        ____________________________
+        Assinatura do Entregador
     `;
 
     // Cria um elemento de link para fazer o download do recibo
