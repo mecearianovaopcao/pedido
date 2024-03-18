@@ -35,7 +35,7 @@ function gerarRecibo() {
 
         Pedido:
         ${waterQuantity} garrafas de ${waterBrand.replace('_', ' ')} - Preço Unitário: R$ ${waterPrice.toFixed(2)} - Total: R$ ${waterTotal.toFixed(2)}
-        ${gasQuantity} botijões de gás - Total: R$ ${(gasTotal).toFixed(2)}
+        ${gasQuantity} botijões de gás BUTANO - Total: R$ ${(gasTotal).toFixed(2)}
 
         Total do Pedido: R$ ${totalPrice.toFixed(2)}
 
