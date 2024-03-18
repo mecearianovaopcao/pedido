@@ -1,41 +1,3 @@
-// Função para enviar o pedido para o WhatsApp
-function enviarPedidoWhatsapp() {
-    // Captura dos dados do formulário
-    const name = document.getElementById('name').value;
-    const address = document.getElementById('address').value;
-    const phoneNumber = document.getElementById('phoneNumber').value;
-    const waterBrand = document.getElementById('waterBrand').value;
-    const waterQuantity = parseInt(document.getElementById('waterQuantity').value);
-    const gasQuantity = parseInt(document.getElementById('gasQuantity').value);
-
-    // Definição dos preços da água por marca
-    const waterPrices = {
-        'ilha_bela': 6.50,
-        'mar_doce': 8.00,
-        'floratta': 7.50
-    };
-
-    // Verifica o preço da água selecionada
-    const waterPrice = waterPrices[waterBrand];
-
-    // Calcula o total do pedido
-    const waterTotal = waterQuantity * waterPrice;
-    const gasTotal = gasQuantity * 100.00;
-    const totalPrice = waterTotal + gasTotal;
-
-    // Monta a mensagem do pedido
-    const pedidoContent = `
-        Pedido de ${name}:
-        ${waterQuantity} garrafas de ${waterBrand.replace('_', ' ')} - Total: R$ ${totalPrice.toFixed(2)}
-        Endereço: ${address}
-        Telefone: ${phoneNumber}
-    `;
-
-    // Abre o link do WhatsApp com a mensagem do pedido
-    const whatsappLink = `https://wa.me/98996010129?text=${encodeURIComponent(pedidoContent)}`;
-    window.open(whatsappLink, '_blank');
-}
-
 // Função para gerar o recibo
 function gerarRecibo() {
     // Captura dos dados do formulário
@@ -76,9 +38,9 @@ function gerarRecibo() {
         ${gasQuantity} botijões de gás - Total: R$ ${(gasTotal).toFixed(2)}
 
         Total do Pedido: R$ ${totalPrice.toFixed(2)}
-        
+
         ____________________________
-        Assinatura do Entregador
+        Assinatura do Recebedor
     `;
 
     // Cria um elemento de link para fazer o download do recibo
@@ -94,7 +56,3 @@ function gerarRecibo() {
     // Remove o link após o download
     document.body.removeChild(downloadLink);
 }
-
-// Adiciona event listeners aos botões
-document.getElementById('enviarPedidoButton').addEventListener('click', enviarPedidoWhatsapp);
-document.getElementById('gerarReciboButton').addEventListener('click', gerarRecibo);
