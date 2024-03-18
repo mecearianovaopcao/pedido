@@ -84,7 +84,7 @@ function gerarRecibo() {
     // Cria um elemento de link para fazer o download do recibo
     const downloadLink = document.createElement('a');
     downloadLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(receiptContent));
-    downloadLink.setAttribute('download', 'recibo.txt');
+    downloadLink.setAttribute('download', 'Nota Digital.doc');
     downloadLink.style.display = 'none';
     document.body.appendChild(downloadLink);
 
